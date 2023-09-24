@@ -5,9 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="effb4c41-5e03-4d7f-931d-c027776f6a89" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/PS4/Program/PS4P1.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PS4/Program/PS4P2.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PS4/Program/PS4P5.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PS4/Program/PS4P3.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -59,7 +57,7 @@
       <option name="presentableId" value="Default" />
       <updated>1695499354466</updated>
       <workItem from="1695499355543" duration="40000" />
-      <workItem from="1695572312413" duration="6168000" />
+      <workItem from="1695572312413" duration="7692000" />
     </task>
     <servers />
   </component>
@@ -67,6 +65,7 @@
     <option name="version" value="3" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/CIS_106_Owen_Ceresa$PS4P3.coverage" NAME="PS4P3 Coverage Results" MODIFIED="1695582411386" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/PS4/Program" />
     <SUITE FILE_PATH="coverage/CIS_106_Owen_Ceresa$PS4P5.coverage" NAME="PS4P5 Coverage Results" MODIFIED="1695574287547" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/PS4/Program" />
     <SUITE FILE_PATH="coverage/CIS_106_Owen_Ceresa$PS4P1.coverage" NAME="PS4P1 Coverage Results" MODIFIED="1695578933271" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/PS4/Program" />
     <SUITE FILE_PATH="coverage/CIS_106_Owen_Ceresa$PS4P2.coverage" NAME="PS4P2 Coverage Results" MODIFIED="1695580869027" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/PS4/Program" />

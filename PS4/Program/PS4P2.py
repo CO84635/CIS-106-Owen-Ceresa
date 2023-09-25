@@ -1,20 +1,10 @@
-def computeep(qty, up):
-    ep = qty * up
+#input phase
+pricepershare = float(input("Enter the price per share: "))
+currentstock = float(input("Enter the current stock: "))
+quantityofstock = float(input("enter the quantityofstock: "))
 
-    return ep
-#Main
-print("Item:      UnitPrice:")
-print("A      $10.00")
-print("B      $20.00")
-print("Which Item?: ")
-item = input()
-print("What is the quantity: ")
-qty = float(input())
-if item == ("A"):
-    up = 10.00
-else:
-    up = 20.00
-ep = computeep(qty, up)
-print("For item:  ", item)
-print("The unit price:  $", up)
-print("The extended price:  $", ep)
+#process phase
+Value = (currentstock - pricepershare) * quantityofstock
+
+#output phase
+print("Here is the value of your stock (If negative that means that you are losing money: ", Value)

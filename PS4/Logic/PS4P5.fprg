@@ -4,54 +4,25 @@
         <attribute name="name" value=""/>
         <attribute name="authors" value="blake"/>
         <attribute name="about" value=""/>
-        <attribute name="saved" value="2023-09-24 08:12:14 PM"/>
-        <attribute name="created" value="Ymxha2U7U1BBQ0VERVNLVE9QOzIwMjMtMDktMjQ7MTI6MDA6NDIgUE07MjY4OA=="/>
-        <attribute name="edited" value="Ymxha2U7U1BBQ0VERVNLVE9QOzIwMjMtMDktMjQ7MDg6MTI6MTQgUE07NzsyODA5"/>
+        <attribute name="saved" value="2023-09-17 09:52:27 PM"/>
+        <attribute name="created" value="Ymxha2U7U1BBQ0VERVNLVE9QOzIwMjMtMDktMTc7MDk6NDg6NTkgUE07MjcxNg=="/>
+        <attribute name="edited" value="Ymxha2U7U1BBQ0VERVNLVE9QOzIwMjMtMDktMTc7MDk6NTI6MjcgUE07MTsyODE0"/>
     </attributes>
     <function name="Main" type="None" variable="">
         <parameters/>
         <body>
-            <declare name="lastname" type="String" array="False" size=""/>
-            <declare name="grosspay" type="Integer" array="False" size=""/>
-            <declare name="nodep" type="Real" array="False" size=""/>
-            <declare name="tax" type="Integer" array="False" size=""/>
-            <declare name="adjgross" type="Integer" array="False" size=""/>
-            <output expression="&quot;Enter last name: &quot;" newline="True"/>
-            <input variable="lastname"/>
-            <output expression="&quot;Enter your gross income: &quot;" newline="True"/>
-            <input variable="grosspay"/>
-            <output expression="&quot;Enter dependents: &quot;" newline="True"/>
-            <input variable="nodep"/>
-            <assign variable="adjgross" expression="computeadjgross(grosspay, nodep)"/>
-            <if expression="adjgross &gt; 50000.00">
-                <then>
-                    <assign variable="tax" expression="adjgross * 0.20"/>
-                </then>
-                <else>
-                    <assign variable="tax" expression="adjgross * 0.10"/>
-                </else>
-            </if>
-            <if expression="tax &lt; 0">
-                <then>
-                    <assign variable="tax" expression="100.00"/>
-                </then>
-                <else/>
-            </if>
-            <output expression="lastname" newline="True"/>
-            <output expression="&quot;Gross income:  $&quot; &amp; grosspay" newline="True"/>
-            <output expression="&quot;Number of Dependents:  &quot; &amp; nodep" newline="True"/>
-            <output expression="&quot;Adjusted Gross:  $&quot; &amp; adjgross" newline="True"/>
-            <output expression="&quot;Income tax:  $&quot; &amp; tax" newline="True"/>
-        </body>
-    </function>
-    <function name="computeadjgross" type="Integer" variable="adjgross">
-        <parameters>
-            <parameter name="grosspay" type="Integer" array="False"/>
-            <parameter name="nodep" type="Real" array="False"/>
-        </parameters>
-        <body>
-            <declare name="adjgross" type="Integer" array="False" size=""/>
-            <assign variable="adjgross" expression="grosspay - (12000.00 * nodep)"/>
+            <output expression="&quot; Please enter your fixed costs: &quot;" newline="True"/>
+            <declare name="fixedcosts" type="Real" array="False" size=""/>
+            <input variable="fixedcosts"/>
+            <output expression="&quot;What is your price per unit?: &quot;" newline="True"/>
+            <declare name="priceperunit" type="Real" array="False" size=""/>
+            <input variable="priceperunit"/>
+            <output expression="&quot; Please enter your cost per unit: &quot;" newline="True"/>
+            <declare name="costperunit" type="Real" array="False" size=""/>
+            <input variable="costperunit"/>
+            <declare name="Breakevenpoint" type="Real" array="False" size=""/>
+            <assign variable="Breakevenpoint" expression="fixedcosts/(priceperunit-costperunit)"/>
+            <output expression="&quot; Hello, your break even point is: &quot; &amp;Breakevenpoint" newline="True"/>
         </body>
     </function>
 </flowgorithm>

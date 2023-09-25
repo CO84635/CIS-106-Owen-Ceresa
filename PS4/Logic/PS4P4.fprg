@@ -4,31 +4,22 @@
         <attribute name="name" value=""/>
         <attribute name="authors" value="blake"/>
         <attribute name="about" value=""/>
-        <attribute name="saved" value="2023-09-24 08:08:39 PM"/>
-        <attribute name="created" value="Ymxha2U7U1BBQ0VERVNLVE9QOzIwMjMtMDktMjQ7MDc6NTI6NTAgUE07MjY5OA=="/>
-        <attribute name="edited" value="Ymxha2U7U1BBQ0VERVNLVE9QOzIwMjMtMDktMjQ7MDg6MDg6MzkgUE07MzsyODE3"/>
+        <attribute name="saved" value="2023-09-17 09:47:49 PM"/>
+        <attribute name="created" value="Ymxha2U7U1BBQ0VERVNLVE9QOzIwMjMtMDktMTc7MDk6NDQ6MjUgUE07MjcwNQ=="/>
+        <attribute name="edited" value="Ymxha2U7U1BBQ0VERVNLVE9QOzIwMjMtMDktMTc7MDk6NDc6NDkgUE07MTsyODIy"/>
     </attributes>
     <function name="Main" type="None" variable="">
         <parameters/>
         <body>
-            <declare name="name" type="String" array="False" size=""/>
-            <declare name="price" type="Integer" array="False" size=""/>
-            <declare name="total" type="Integer" array="False" size=""/>
-            <declare name="war" type="Integer" array="False" size=""/>
-            <output expression="&quot;What is the name of appliance: &quot;" newline="True"/>
-            <input variable="name"/>
-            <output expression="&quot;What is the cost of the appliance: &quot;" newline="True"/>
-            <input variable="price"/>
-            <if expression="price &gt; 1000.00">
-                <then>
-                    <assign variable="war" expression="price * 0.10"/>
-                </then>
-                <else>
-                    <assign variable="war" expression="price * 0.05"/>
-                </else>
-            </if>
-            <assign variable="total" expression="price + war"/>
-            <output expression="&quot;For the appliance:  &quot; &amp;  name &amp;&quot;, and initially costed:  $&quot; &amp; price &amp;&quot;, with a warranty cost of:  $&quot; &amp; war &amp;&quot;, with a total of:  $&quot; &amp; total" newline="True"/>
+            <output expression="&quot; Please enter your first name: &quot;" newline="True"/>
+            <declare name="firstname" type="String" array="False" size=""/>
+            <input variable="firstname"/>
+            <output expression="&quot; How many steps have you walked today? : &quot;" newline="True"/>
+            <declare name="steps" type="Integer" array="False" size=""/>
+            <input variable="steps"/>
+            <declare name="caloriesburned" type="Real" array="False" size=""/>
+            <assign variable="caloriesburned" expression="steps * .25"/>
+            <output expression="&quot;Dear: &quot; &amp;firstname &amp;&quot;, You have burned &quot; &amp;caloriesburned &amp;&quot;Calories&quot;" newline="True"/>
         </body>
     </function>
 </flowgorithm>

@@ -1,19 +1,10 @@
-lastname = input("Enter last name: ")
-grosspay = input("Enter your gross income: ")
-nodep = input("Enter dependents: ")
+#input phase
+fixedcosts = float(input("Please enter your fixed costs: "))
+priceperunit = float(input("Please enter your price per unit: "))
+costperunit = float(input("Please enter your cost per unit: "))
 
-adjgross = float(grosspay) - 12000.00 * float(nodep)
+#process phase
+breakevenpoint= fixedcosts / (priceperunit / costperunit)
 
-if adjgross > 50000.00:
-    tax = adjgross * 0.20
-else:
-    tax = adjgross * 0.10
-
-    if tax < 0:
-        tax = 100.00
-
-print(lastname)
-print("Gross income: $", grosspay)
-print("Number of Dependents: ", nodep)
-print("Adjusted Gross:   $", adjgross)
-print("Income Tax:   $", tax)
+#output phase
+print("Hello, your break even point is: ", breakevenpoint)

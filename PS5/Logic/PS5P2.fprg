@@ -1,0 +1,47 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="blake"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-09-24 01:31:40 PM"/>
+        <attribute name="created" value="Ymxha2U7U1BBQ0VERVNLVE9QOzIwMjMtMDktMjQ7MDE6MTA6MDMgUE07MjY4NA=="/>
+        <attribute name="edited" value="Ymxha2U7U1BBQ0VERVNLVE9QOzIwMjMtMDktMjQ7MDE6MzE6NDAgUE07MTsyNzk2"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="item" type="String" array="False" size=""/>
+            <declare name="qty" type="Real" array="False" size=""/>
+            <declare name="up" type="Integer" array="False" size=""/>
+            <declare name="ep" type="Integer" array="False" size=""/>
+            <output expression="&quot;Item:     Unit Price:&quot;&amp; ToChar(13) &amp;&quot;A      $10.00&quot;&amp;ToChar(13)&amp;&quot;B      $20.00&quot;" newline="True"/>
+            <output expression="&quot;Which item would you like?&quot;" newline="True"/>
+            <input variable="item"/>
+            <output expression="&quot;What is the quantity of the item?&quot;" newline="True"/>
+            <input variable="qty"/>
+            <if expression="item = &quot;A&quot;">
+                <then>
+                    <assign variable="up" expression="10.00"/>
+                </then>
+                <else>
+                    <assign variable="up" expression="20.00"/>
+                </else>
+            </if>
+            <assign variable="ep" expression="computeep(up, qty)"/>
+            <output expression="&quot;For item:  &quot; &amp; item" newline="True"/>
+            <output expression="&quot;The unit price:  $&quot; &amp; up" newline="True"/>
+            <output expression="&quot;Your extended price:  $&quot; &amp; ep" newline="True"/>
+        </body>
+    </function>
+    <function name="computeep" type="Integer" variable="ep">
+        <parameters>
+            <parameter name="up" type="Integer" array="False"/>
+            <parameter name="qty" type="Real" array="False"/>
+        </parameters>
+        <body>
+            <declare name="ep" type="Integer" array="False" size=""/>
+            <assign variable="ep" expression="up * qty"/>
+        </body>
+    </function>
+</flowgorithm>

@@ -4,44 +4,31 @@
         <attribute name="name" value=""/>
         <attribute name="authors" value="blake"/>
         <attribute name="about" value=""/>
-        <attribute name="saved" value="2023-09-24 02:06:59 PM"/>
-        <attribute name="created" value="Ymxha2U7U1BBQ0VERVNLVE9QOzIwMjMtMDktMjQ7MDE6NTI6NDQgUE07MjY5NQ=="/>
-        <attribute name="edited" value="Ymxha2U7U1BBQ0VERVNLVE9QOzIwMjMtMDktMjQ7MDI6MDY6NTkgUE07MjsyODEw"/>
+        <attribute name="saved" value="2023-09-17 09:48:56 PM"/>
+        <attribute name="created" value="Ymxha2U7U1BBQ0VERVNLVE9QOzIwMjMtMDktMTc7MDk6MjU6MTAgUE07MjY5OA=="/>
+        <attribute name="edited" value="Ymxha2U7U1BBQ0VERVNLVE9QOzIwMjMtMDktMTc7MDk6NDg6NTYgUE07MjsyODIy"/>
     </attributes>
     <function name="Main" type="None" variable="">
         <parameters/>
         <body>
-            <declare name="qty" type="Real" array="False" size=""/>
-            <declare name="cst" type="Integer" array="False" size=""/>
-            <declare name="total" type="Integer" array="False" size=""/>
-            <declare name="sp" type="Integer" array="False" size=""/>
-            <declare name="odrtotal" type="Integer" array="False" size=""/>
-            <output expression="&quot;How many books: &quot;" newline="True"/>
-            <input variable="qty"/>
-            <output expression="&quot;What is the cost: &quot;" newline="True"/>
-            <input variable="cst"/>
-            <assign variable="total" expression="computetotal(qty, cst)"/>
-            <if expression="total &gt; 50.00">
-                <then>
-                    <assign variable="sp" expression="0.00"/>
-                </then>
-                <else>
-                    <assign variable="sp" expression="25.00"/>
-                </else>
-            </if>
-            <assign variable="odrtotal" expression="total + sp"/>
-            <output expression="&quot;Your order total:  $&quot; &amp; odrtotal" newline="True"/>
-            <output expression="&quot;Shipping:  $&quot; &amp; sp" newline="True"/>
-        </body>
-    </function>
-    <function name="computetotal" type="Integer" variable="total">
-        <parameters>
-            <parameter name="qty" type="Real" array="False"/>
-            <parameter name="cst" type="Integer" array="False"/>
-        </parameters>
-        <body>
-            <declare name="total" type="Integer" array="False" size=""/>
-            <assign variable="total" expression="cst * qty"/>
+            <output expression="&quot;Please enter the total of the meal: &quot;" newline="True"/>
+            <declare name="totalofmeal" type="Real" array="False" size=""/>
+            <input variable="totalofmeal"/>
+            <declare name="fifteenpercent" type="Real" array="False" size=""/>
+            <assign variable="fifteenpercent" expression="totalofmeal * .15"/>
+            <declare name="fifteenpercenttotal" type="Real" array="False" size=""/>
+            <assign variable="fifteenpercenttotal" expression="totalofmeal + fifteenpercent"/>
+            <declare name="eightteenpercent" type="Real" array="False" size=""/>
+            <assign variable="eightteenpercent" expression="totalofmeal * .18"/>
+            <declare name="eightteenpercenttotal" type="Real" array="False" size=""/>
+            <assign variable="eightteenpercenttotal" expression="totalofmeal + eightteenpercent"/>
+            <declare name="twentypercent" type="Real" array="False" size=""/>
+            <assign variable="twentypercent" expression="totalofmeal * .20"/>
+            <declare name="twentypercenttotal" type="Real" array="False" size=""/>
+            <assign variable="twentypercenttotal" expression="totalofmeal + twentypercent"/>
+            <output expression="&quot;With 15% Tip: &quot;&#13;&#10;&#13;&#10;&amp;ToChar(13) &amp;&quot;Total: &quot; &amp;totalofmeal &#13;&#10;&#13;&#10;&amp;ToChar(13)&amp;&quot;Tip: &quot; &amp;fifteenpercent &#13;&#10;&#13;&#10;&amp;ToChar(13)&amp;&quot;Total with Tip: &quot; &amp;fifteenpercenttotal" newline="True"/>
+            <output expression="&quot;With 18% Tip: &quot;&#13;&#10;&#13;&#10;&amp;ToChar(13) &amp;&quot;Total: &quot; &amp;totalofmeal &#13;&#10;&#13;&#10;&amp;ToChar(13) &amp;&quot;Tip: &quot; &amp;eightteenpercent &#13;&#10;&#13;&#10;&amp;ToChar(13) &amp;&quot;Total with Tip: &quot; &amp;eightteenpercenttotal" newline="True"/>
+            <output expression="&quot;With 20% Tip: &quot;&#13;&#10;&#13;&#10;&amp;ToChar(13) &amp;&quot;Total: &quot; &amp;totalofmeal &#13;&#10;&#13;&#10;&amp;ToChar(13) &amp;&quot;Tip: &quot; &amp;twentypercent &#13;&#10;&#13;&#10;&amp;ToChar(13) &amp;&quot;Total with Tip: &quot; &amp;twentypercenttotal" newline="True"/>
         </body>
     </function>
 </flowgorithm>

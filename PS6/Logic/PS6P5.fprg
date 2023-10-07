@@ -1,0 +1,44 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="blake"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-09-28 06:45:37 PM"/>
+        <attribute name="created" value="Ymxha2U7U1BBQ0VUT1A7MjAyMy0wOS0yODswNjoyMTowOCBQTTsyNDA1"/>
+        <attribute name="edited" value="Ymxha2U7U1BBQ0VUT1A7MjAyMy0wOS0yODswNjo0NTozNyBQTTsyOzI1MjI="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="lastname" type="String" array="False" size=""/>
+            <declare name="salary" type="Integer" array="False" size=""/>
+            <declare name="joblevel" type="Integer" array="False" size=""/>
+            <declare name="bonuspercent" type="Real" array="False" size=""/>
+            <declare name="bonus" type="Real" array="False" size=""/>
+            <output expression="&quot;What is your lastname: &quot;" newline="True"/>
+            <input variable="lastname"/>
+            <output expression="&quot;What is your salary: &quot;" newline="True"/>
+            <input variable="salary"/>
+            <output expression="&quot;What is your job level: &quot;" newline="True"/>
+            <input variable="joblevel"/>
+            <if expression="joblevel &gt;= 10">
+                <then>
+                    <assign variable="bonuspercent" expression="0.25"/>
+                </then>
+                <else>
+                    <if expression="joblevel &gt;= 5">
+                        <then>
+                            <assign variable="bonuspercent" expression="0.20"/>
+                        </then>
+                        <else>
+                            <assign variable="bonuspercent" expression="0.10"/>
+                        </else>
+                    </if>
+                </else>
+            </if>
+            <assign variable="bonus" expression="salary * bonuspercent"/>
+            <output expression="&quot;Dear, &quot; &amp;lastname &amp;&quot;, your bonus was: $&quot; &amp;bonus" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

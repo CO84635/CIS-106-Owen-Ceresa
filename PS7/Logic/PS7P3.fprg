@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="blake"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-10-07 01:57:48 PM"/>
+        <attribute name="created" value="Ymxha2U7U1BBQ0VERVNLVE9QOzIwMjMtMTAtMDc7MDE6NTA6NDQgUE07MjY4Ng=="/>
+        <attribute name="edited" value="Ymxha2U7U1BBQ0VERVNLVE9QOzIwMjMtMTAtMDc7MDE6NTc6NDggUE07MTsyODA1"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="response" type="String" array="False" size=""/>
+            <declare name="lastname" type="String" array="False" size=""/>
+            <declare name="average" type="Integer" array="False" size=""/>
+            <declare name="exam1" type="Integer" array="False" size=""/>
+            <declare name="exam2" type="Integer" array="False" size=""/>
+            <declare name="numofstudents" type="Integer" array="False" size=""/>
+            <output expression="&quot;Would you like to run this program? &quot;" newline="True"/>
+            <input variable="response"/>
+            <assign variable="numofstudents" expression="0"/>
+            <while expression="response == &quot;Yes&quot;">
+                <output expression="&quot;What is your lastname?: &quot;" newline="True"/>
+                <input variable="lastname"/>
+                <output expression="&quot;What was your first exam score?: &quot;" newline="True"/>
+                <input variable="exam1"/>
+                <output expression="&quot;What was your second exam score?: &quot;" newline="True"/>
+                <input variable="exam2"/>
+                <assign variable="average" expression="(exam1 + exam2)/2"/>
+                <output expression="&quot;Dear: &quot; &amp;lastname &amp;&quot;, your average exam score is: &quot; &amp;average" newline="True"/>
+                <assign variable="numofstudents" expression="numofstudents + 1"/>
+                <output expression="&quot;Would you like to run this program again? &quot;" newline="True"/>
+                <input variable="response"/>
+            </while>
+            <output expression="&quot;Number of students who entered data: &quot; &amp; numofstudents" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

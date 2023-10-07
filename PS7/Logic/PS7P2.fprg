@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="blake"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-10-07 01:50:41 PM"/>
+        <attribute name="created" value="Ymxha2U7U1BBQ0VERVNLVE9QOzIwMjMtMTAtMDc7MDE6NDQ6NTYgUE07MjY5Mg=="/>
+        <attribute name="edited" value="Ymxha2U7U1BBQ0VERVNLVE9QOzIwMjMtMTAtMDc7MDE6NTA6NDEgUE07MTsyNzkx"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="start" type="Integer" array="False" size=""/>
+            <declare name="stop" type="Integer" array="False" size=""/>
+            <declare name="inc" type="Integer" array="False" size=""/>
+            <output expression="&quot;Input start: &quot;" newline="True"/>
+            <input variable="start"/>
+            <output expression="&quot;Input stop: &quot;" newline="True"/>
+            <input variable="stop"/>
+            <output expression="&quot;Input increment: &quot;" newline="True"/>
+            <input variable="inc"/>
+            <declare name="current" type="Integer" array="False" size=""/>
+            <assign variable="current" expression="start"/>
+            <while expression="current &lt;= stop">
+                <output expression="current" newline="True"/>
+                <assign variable="current" expression="current + inc"/>
+            </while>
+            <output expression="&quot;Done&quot;" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

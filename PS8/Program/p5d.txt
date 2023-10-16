@@ -1,0 +1,15 @@
+Ceresa
+I
+15
+Brandon
+O
+30
+Rymza
+I
+10
+Batt
+O
+50
+Hunt
+I
+100

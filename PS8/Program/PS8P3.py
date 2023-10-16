@@ -1,9 +1,6 @@
-
 f = open("p3d.txt", "r")
 
-
 totbon = 0.0
-
 
 while True:
     last_name = f.readline().strip()
@@ -24,13 +21,9 @@ while True:
 
     bonus = salary * br
     totbon += bonus
-
-
     print("Lastname:", last_name)
     print("Salary: $", salary)
     print("Bonus: $", bonus)
     print("Total bonuses:", totbon)
 
-
-f.close()
 

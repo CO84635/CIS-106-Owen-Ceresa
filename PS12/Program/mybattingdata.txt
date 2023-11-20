@@ -1,5 +1,9 @@
-def load_player_data(file_path):
-    player_names = []
-    batting_averages = []
-
-    with open("mybatting"
+Thompson,0.332
+Hunt,0.276
+Batt,0.395
+Ceresa,0.498
+Donlea,0.198
+Toniolo,0.318
+Haef,0.289
+Wilson,0.266
+Matt,0.222

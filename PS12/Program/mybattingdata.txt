@@ -1,0 +1,5 @@
+def load_player_data(file_path):
+    player_names = []
+    batting_averages = []
+
+    with open("mybatting"
